@@ -12,7 +12,7 @@ const deposit = () => {
     const depoAmt = prompt("Please enter deposit amount: "); // Prompt user to enter deposit amount
     const numDepoAmt = parseFloat(depoAmt); // converts user input to a number
 
-    if (isNaN(numDepoAmt)) { // Check if user input is not a number and then calls the deposit function so user may reattempt 
+    if (isNaN(numDepoAmt) || numDepoAmt <= 0) { // Check if user input is not a number and then calls the deposit function so user may reattempt 
         console.log("Invalid amount. Please try again.");
         deposit();
     }
